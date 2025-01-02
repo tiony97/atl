@@ -1,0 +1,106 @@
+/* CAREERS PAGE STYLES */
+.career-form {
+  background-color: #f2f7f9;
+  .container {
+    width: 50%;
+    form {
+      label {
+        color: var(--foreground-color);
+        font-size: 16px;
+        font-weight: 600;
+      }
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid #242626;
+      }
+      textarea {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid #242626;
+      }
+      .custom-select {
+        width: 100%;
+        label {
+          color: var(--foreground-color);
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .select-box {
+          position: relative;
+
+          select {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #f4f9fb;
+            color: var(--foreground-color);
+            border-bottom: 1px solid var(--foreground-color);
+            margin-top: 0.5em;
+            appearance: none;
+            cursor: pointer;
+
+            &:focus {
+              outline: none;
+              border-color: var(--primary-accent-color);
+            }
+          }
+
+          select option {
+            padding: 8px;
+            background-color: #fff;
+            color: var(--foreground-color);
+          }
+        }
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #afe8fd;
+        width: 100%;
+        height: 50px;
+        transition: all 0.3s ease-in;
+        p {
+          color: var(--foreground-color);
+          font-weight: 600;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          color: var(--foreground-color);
+          border: 1.5px solid var(--foreground-color);
+          border-radius: 50%;
+          padding: 4px;
+          margin-left: 0.5em;
+        }
+        &:hover {
+          border-color: transparent;
+          background: linear-gradient(
+            277.95deg,
+            #1396ba 11%,
+            #1396ba 46.69%,
+            #1396ba 65.56%,
+            #015883 99.81%
+          );
+          p {
+            color: var(--background-color) !important
+			;
+          }
+          span {
+            color: var(--background-color);
+            border-color: var(--background-color);
+          }
+        }
+      }
+    }
+  }
+}

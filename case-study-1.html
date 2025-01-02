@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/fancybox.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Hidden Search Form -->
+    <div id="search-popup" style="display: none">
+      <form action="/search" method="GET">
+        <h2>Search</h2>
+        <input
+          type="text"
+          name="query"
+          placeholder="Enter search term..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!--Header-->
+    <header class="bg-white">
+      <div class="container h-full flex items-center justify-between">
+        <!--Logo-->
+        <img src="./assets/images/logo.jpg" alt="Logo" class="logo" />
+
+        <!--Navigation-->
+        <div class="w-fit h-full flex items-center">
+          <!--Menu Links-->
+          <div class="main-menu">
+            <ul class="menu-links relative flex items-center list-none">
+              <li class="menu-link active"><a href="#">Home</a></li>
+
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">About Us</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">countries</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">Services</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-link"><a href="#">Why Atlas</a></li>
+            </ul>
+          </div>
+
+          <!--CTA Buttons-->
+          <button class="search mx-4" id="search-icon">
+            <img src="./assets/images/search-normal.png" alt="search" />
+          </button>
+
+          <a href="#" class="cta-btn flex items-center px-4 py-2">
+            <span class="mr-3"><i class="fas fa-phone"></i></span>
+            Book a Call
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--Page Content-->
+    <main>
+      <!--Case Study Page Banner-->
+      <section class="common-banner relative">
+        <img
+          src="./assets/images/contact-bg.jpg"
+          alt="banner-bg-image"
+          class="bg-image absolute top-0 left-0 w-full h-full object-cover"
+          style="object-position: 100% 30%"
+        />
+        <div class="overlay absolute top-0 left-0 w-full h-full"></div>
+
+        <!--Banner Content-->
+        <div class="container banner-content relative flex flex-col">
+          <h5 class="mb-5">FEATURED CASE STUDY</h5>
+          <h1>Utility company improves arrears collection by 50%</h1>
+        </div>
+      </section>
+
+      <!--Tabs-->
+      <section class="cs-tabs">
+        <div class="tab-nav">
+          <div class="container flex items-center justify-between">
+            <p class="tab-bc">
+              <span>Services / </span>Platform, Automation and Analytics
+            </p>
+
+            <div class="tab-links flex items-center">
+              <button
+                class="tab-link active flex items-center justify-center px-3"
+              >
+                The Challenge
+              </button>
+              <button
+                class="tab-link h-full flex items-center justify-center px-3"
+              >
+                Solution
+              </button>
+              <button
+                class="tab-link h-full flex items-center justify-center px-3"
+              >
+                Result
+              </button>
+            </div>
+
+            <a href="#" class="site-btn" style="width: fit-content">
+              <p>Explore Now</p>
+              <span><i class="fas fa-arrow-right-long"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="tab-content py-10">
+          <div class="container grid grid-cols-2 gap-12">
+            <div class="content-wrapper">
+              <h4 class="mb-5">
+                <span>The challenge:</span> Simplifying the complexities of drug
+                administration for clinic trials
+              </h4>
+              <p class="mb-2">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </p>
+              <p class="mb-2">
+                If you are going to use a passage of Lorem Ipsum, you need to be
+                sure there isn't anything embarrassing hidden in the middle of
+                text. All the Lorem Ipsum generators on the Internet tend to
+                repeat predefined chunks as necessary, making this the first
+                true generator on the Internet. It uses a dictionary of over 200
+                Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable.
+              </p>
+              <p class="mb-2">
+                The generated Lorem Ipsum is therefore always free from
+                repetition, injected humour, or non-characteristic words etc. It
+                is a long established fact that a reader will be distracted by
+                the readable content of a page when looking at its layout. The
+                point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here,
+                content here', making it look like readable English.
+              </p>
+              <p class="mb-2">
+                The generated Lorem Ipsum is therefore always free from
+                repetition, injected humour, or non-characteristic words etc. It
+                is a long established fact that a reader will be distracted by
+                the readable content of a page when looking at its layout. The
+                point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here,
+                content here', making it look like readable English.
+              </p>
+            </div>
+
+            <div class="impact px-8 pt-8 pb-16">
+              <h4>Business impact</h4>
+              <div class="divider flex my-3"></div>
+              <div class="figures w-full block">
+                <div class="figure space-y-2">
+                  <h5 class="font-normal">100%</h5>
+                  <p>Uncompromised care cost reduced</p>
+                </div>
+                <div class="figure space-y-2">
+                  <h5 class="font-normal">85%</h5>
+                  <p>Uncompromised care cost reduced</p>
+                </div>
+                <div class="figure space-y-2">
+                  <h5 class="font-normal">75%</h5>
+                  <p>Uncompromised care cost reduced</p>
+                </div>
+                <div class="figure space-y-2">
+                  <h5 class="font-normal">25%</h5>
+                  <p>Uncompromised care cost reduced</p>
+                </div>
+                <div class="figure space-y-2">
+                  <h5 class="font-normal">Atlas Contact Centres</h5>
+                  <p>Uncompromised care cost reduced</p>
+                </div>
+              </div>
+
+              <div class="book w-full space-y-6 mt-16">
+                <h3 class="text-3xl font-bold text-white">Sound familiar?</h3>
+                <a href="#" class="site-btn mt-10">
+                  <p>Book a consult</p>
+                  <span><i class="fas fa-arrow-right-long"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Case Study CTA-->
+      <section class="cs-cta">
+        <div class="container flex items-center justify-between">
+          <div class="content-wrapper block space-y-3">
+            <h4>What’s your challenge?</h4>
+            <p>We’d love to hear about your current business</p>
+          </div>
+
+          <a href="#" class="site-btn">
+            <p>Contact Us</p>
+            <span><i class="fas fa-arrow-right-long"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <!--Case Studies-->
+      <div class="case-studies-section relative py-12">
+        <div class="container flex flex-col items-center">
+          <div class="intro mb-10">
+            <h5 style="color: #1396ba">Want to know our impact?</h5>
+            <h2 style="color: var(--primary-accent-color)">Case Studies</h2>
+          </div>
+
+          <div class="cs-swiper relative overflow-hidden">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="case-study">
+                  <div class="image-wrapper relative">
+                    <img
+                      src="./assets/images/case study image 1.jpg"
+                      alt="Case Study 1"
+                      class="absolute top-0 left-0 object-cover w-full h-full"
+                    />
+                    <span class="absolute bottom-0 left-0">Case Study</span>
+                  </div>
+
+                  <div class="content-wrapper px-3 py-6">
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="case-study">
+                  <div class="image-wrapper relative">
+                    <img
+                      src="./assets/images/case study image 2.jpg"
+                      alt="Case Study 1"
+                      class="absolute top-0 left-0 object-cover w-full h-full"
+                    />
+                    <span class="absolute bottom-0 left-0">Case Study</span>
+                  </div>
+
+                  <div class="content-wrapper px-3 py-6">
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="case-study">
+                  <div class="image-wrapper relative">
+                    <img
+                      src="./assets/images/case study image 3.jpg"
+                      alt="Case Study 1"
+                      class="absolute top-0 left-0 object-cover w-full h-full"
+                    />
+                    <span class="absolute bottom-0 left-0">Case Study</span>
+                  </div>
+
+                  <div class="content-wrapper px-3 py-6">
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div class="case-study">
+                  <div class="image-wrapper relative">
+                    <img
+                      src="./assets/images/case study image 1.jpg"
+                      alt="Case Study 1"
+                      class="absolute top-0 left-0 object-cover w-full h-full"
+                    />
+                    <span class="absolute bottom-0 left-0">Case Study</span>
+                  </div>
+
+                  <div class="content-wrapper px-3 py-6">
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide">
+                <div class="case-study">
+                  <div class="image-wrapper relative">
+                    <img
+                      src="./assets/images/case study image 2.jpg"
+                      alt="Case Study 1"
+                      class="absolute top-0 left-0 object-cover w-full h-full"
+                    />
+                    <span class="absolute bottom-0 left-0">Case Study</span>
+                  </div>
+
+                  <div class="content-wrapper px-3 py-6">
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 6 -->
+              <div class="swiper-slide">
+                <div class="case-study">
+                  <div class="image-wrapper relative">
+                    <img
+                      src="./assets/images/case study image 3.jpg"
+                      alt="Case Study 1"
+                      class="absolute top-0 left-0 object-cover w-full h-full"
+                    />
+                    <span class="absolute bottom-0 left-0">Case Study</span>
+                  </div>
+
+                  <div class="content-wrapper px-3 py-6">
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slider Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <a href="#" class="view-all-btn mt-10">
+            <p>See All Case Studies</p>
+            <span><i class="fas fa-arrow-right-long"></i></span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-content relative w-full h-fit py-16">
+        <img
+          src="./assets/images/footer_vector.png"
+          alt="footer-vector"
+          class="absolute top-0 right-0 h-full w-auto z-0"
+        />
+        <div class="container">
+          <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">countries</h3>
+              <ul>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Private Equity</a></li>
+                <li><a href="#">EdTech</a></li>
+                <li><a href="#">KPOs</a></li>
+                <li><a href="#">Government Entities</a></li>
+                <li><a href="#">Banking and Financial BPO</a></li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Services</h3>
+              <ul>
+                <li><a href="#">Customer Experience</a></li>
+                <li><a href="#">Intelligent Back Office</a></li>
+                <li><a href="#">Platform, Automation & Analytics</a></li>
+                <li><a href="#">Insights, Design Experience</a></li>
+                <li><a href="#">Advisory</a></li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Location</h3>
+              <address>
+                4th Floor The Oval, Westlands, Nairobi Kenya<br />
+                P.O.BOX 69014, 00622 Nairobi
+              </address>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Contacts</h3>
+              <p>Phone & Mobile:</p>
+              <p>+254 727 485 151</p>
+              <p>+254 724 393 999</p>
+            </div>
+          </div>
+
+          <div class="w-full flex items-start justify-between">
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mt-6 mb-4">Email</h3>
+              <ul>
+                <li>support@atlascontactcentres.com</li>
+                <li>sales@atlascontactcentres.com</li>
+                <li>info@atlascontactcentres.com</li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mt-6 mb-4">Follow Us</h3>
+              <div class="social flex items-center space-x-2 mt-8">
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bar w-full h-fit py-6">
+        <div class="container flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="#">Privacy Policy</a>
+            <div
+              class="separator w-px h-6 mx-4"
+              style="background-color: #062a3c"
+            ></div>
+            <a href="#">Sitemap</a>
+          </div>
+
+          <p>©Atlas Contact Centres 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--JS-->
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/fancybox.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

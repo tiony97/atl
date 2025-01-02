@@ -1,0 +1,40 @@
+/* INSG STYLES */
+.card-section {
+  background-color: #0158830f;
+  .container {
+    h4 {
+      color: var(--primary-accent-color);
+    }
+    p {
+      color: #4f5356;
+    }
+    .card-container {
+      .card {
+        width: 100%;
+        height: fit-content;
+        background-color: var(--background-color);
+        box-shadow: 0px 4px 4px 0px #afe8fd;
+
+        h6 {
+          font-size: 20px;
+          font-weight: 600;
+          color: var(--primary-accent-color);
+        }
+        .items {
+          .item {
+            span {
+              margin-top: 0.1em;
+              font-size: 13px;
+              color: var(--primary-accent-color);
+            }
+            p {
+              font-size: 13px;
+              line-height: 20px;
+              color: #242626;
+            }
+          }
+        }
+      }
+    }
+  }
+}

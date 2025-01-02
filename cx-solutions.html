@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/fancybox.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Hidden Search Form -->
+    <div id="search-popup" style="display: none">
+      <form action="/search" method="GET">
+        <h2>Search</h2>
+        <input
+          type="text"
+          name="query"
+          placeholder="Enter search term..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!--Header-->
+    <header class="bg-white">
+      <div class="container h-full flex items-center justify-between">
+        <!--Logo-->
+        <img src="./assets/images/logo.jpg" alt="Logo" class="logo" />
+
+        <!--Navigation-->
+        <div class="w-fit h-full flex items-center">
+          <!--Menu Links-->
+          <div class="main-menu">
+            <ul class="menu-links relative flex items-center list-none">
+              <li class="menu-link active"><a href="#">Home</a></li>
+
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">About Us</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">countries</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">Services</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-link"><a href="#">Why Atlas</a></li>
+            </ul>
+          </div>
+
+          <!--CTA Buttons-->
+          <button class="search mx-4" id="search-icon">
+            <img src="./assets/images/search-normal.png" alt="search" />
+          </button>
+
+          <a href="#" class="cta-btn flex items-center px-4 py-2">
+            <span class="mr-3"><i class="fas fa-phone"></i></span>
+            Book a Call
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--Page Content-->
+    <main>
+      <!--Cx Solutions Banner-->
+      <section class="common-banner relative">
+        <img
+          src="./assets/images/cx-banner.jpg"
+          alt="banner-bg-image"
+          class="bg-image absolute top-0 left-0 w-full h-full object-scale-down"
+          style="object-position: 100% 50%"
+        />
+        <div class="overlay absolute top-0 left-0 w-full h-full"></div>
+
+        <!--Banner Content-->
+        <div class="container banner-content relative flex flex-col">
+          <h5 class="mb-1">DIGITALLY EMPOWERED CX</h5>
+          <h1>Beyond the contact centre</h1>
+          <p class="w-2/5">
+            Design your customers’ experiences across the entire life cycle.
+          </p>
+          <div class="flex items-center space-x-3 mt-4">
+            <a href="#" class="site-btn" style="width: fit-content">
+              <p>Watch Video</p>
+              <span><i class="fas fa-arrow-right-long"></i></span>
+            </a>
+            <a href="#" class="site-btn-outline" style="width: fit-content">
+              <p>Talk to an expert</p>
+              <span><i class="fas fa-arrow-right-long"></i></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--Two Column Section-->
+      <section class="cx-dual-col py-12">
+        <div class="container grid grid-cols-2 gap-10">
+          <div
+            class="image-wrapper relative w-full flex items-end justify-center"
+          >
+            <img
+              src="./assets/images/solution_img_3.jpg"
+              alt="family-image"
+              class="w-full absolute top-0 left-0 object-top object-cover"
+            />
+            <div
+              class="overlay absolute top-0 left-0 w-full z-0"
+              style="
+                background: linear-gradient(
+                  276.89deg,
+                  #1396ba 1.57%,
+                  #1396ba 34.41%,
+                  #1396ba 53.4%,
+                  #015883 99.94%
+                );
+                opacity: 0.5;
+              "
+            ></div>
+
+            <div class="text-content lg:p-10 p-5">
+              <h4>Why CX transformation need a pragmatic approach</h4>
+              <div
+                class="divider mt-5"
+                style="
+                  width: 100%;
+                  height: 2px;
+                  background: linear-gradient(
+                    90deg,
+                    #afe8fd -6.46%,
+                    rgba(175, 232, 253, 0) 100%
+                  );
+                "
+              ></div>
+            </div>
+          </div>
+
+          <div class="content-wrapper w-full h-fit flex flex-col justify-start">
+            <h4 class="text-3xl leading-9 mb-2">
+              Customer relationships today are defined by few fundamental
+              truths:
+            </h4>
+            <p class="mb-4">
+              When done right, digitalization drives unparalleled agility,
+              scalability and productivity. We complement your human capital
+              with our ‘Digital First.
+            </p>
+            <p>
+              Digital Now’ approach to create the greatest business impact. Our
+              custom solutions across Banking and Financial Services, Mortgage,
+              Healthcare, Communications, Media and Technology, and Diversified
+              industries are designed to power growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Design Experience Section-->
+      <section class="design-experience py-12 pb-24">
+        <div class="container">
+          <h4 class="text-3xl leading-9 font-medium mb-5">
+            We design experiences that work for your customers, your brand and
+            your business.
+          </h4>
+          <p class="font-light mb-10">
+            When done right, digitalization drives unparalleled agility,
+            scalability and productivity. We complement your human capital with
+            our ‘Digital First. Digital Now’ approach to create the greatest
+            business impact. Our custom solutions across Banking and Financial
+            Services, Mortgage, Healthcare, Communications, Media and
+            Technology, and Diversified industries are designed to power growth.
+          </p>
+          <div
+            class="tab-section w-full flex items-start justify-between space-x-4"
+          >
+            <div class="image-wrapper relative">
+              <img
+                src="./assets/images/exp-image.jpg"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt="tab-section-image"
+              />
+            </div>
+
+            <!--Tabs-->
+            <div class="tab-container">
+              <h4 class="font-semibold mb-8">How we do it</h4>
+              <div class="tabs">
+                <div class="tab active" data-content="analytics">Analytics</div>
+                <div class="tab" data-content="cx-advisory">CX Advisory</div>
+                <div class="tab" data-content="automation">Automation</div>
+                <div class="tab" data-content="accountability">
+                  Accountability
+                </div>
+              </div>
+              <div class="tab-content">
+                <div id="analytics" class="content active">
+                  <p>
+                    We use your real-life relationship data to fully understand
+                    your customer journey.
+                  </p>
+                </div>
+                <div id="cx-advisory" class="content">
+                  <p>
+                    We provide expert CX advisory to enhance your customer
+                    experience.
+                  </p>
+                </div>
+                <div id="automation" class="content">
+                  <p>
+                    Our automation solutions streamline your operations for
+                    efficiency.
+                  </p>
+                </div>
+                <div id="accountability" class="content">
+                  <p>
+                    We ensure transparency and accountability in every step.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Value Delivery Section-->
+      <section class="value-delivery relative py-16">
+        <img
+          src="./assets/images/value-delivery-bg.jpg"
+          alt="banner-bg-image"
+          class="bg-image absolute top-0 left-0 w-full h-full object-scale-down"
+          style="object-position: 100% 50%"
+        />
+        <div class="overlay absolute top-0 left-0 w-full h-full"></div>
+
+        <div class="container flex flex-col">
+          <h4 class="text-3xl leading-9 mb-5">Tangible value delivery</h4>
+          <p class="font-light w-3/5 mb-10">
+            When done right, digitalization drives unparalleled agility,
+            scalability and productivity. We complement your human capital.
+          </p>
+
+          <!--Tabs-->
+          <div class="tab-container">
+            <div class="tabs">
+              <div class="tab active" data-content="branded">
+                A branded customer experience
+              </div>
+              <div class="tab" data-content="revenue">Revenue Lift</div>
+              <div class="tab" data-content="operation">
+                Operational Efficiency
+              </div>
+              <div class="tab" data-content="customer">Customer Retention</div>
+            </div>
+
+            <div class="tab-content">
+              <div id="branded" class="content active">
+                <p>
+                  We use your real-life relationship data to fully understand
+                  your customer journey
+                </p>
+              </div>
+              <div id="revenue" class="content">
+                <p>
+                  We provide expert CX advisory to enhance your customer
+                  experience.
+                </p>
+              </div>
+              <div id="operation" class="content">
+                <p>
+                  Our automation solutions streamline your operations for
+                  efficiency.
+                </p>
+              </div>
+              <div id="customer" class="content">
+                <p>We ensure transparency and accountability in every step.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="site-btn mt-6" style="width: fit-content">
+            <p>View Case Study</p>
+            <span><i class="fas fa-arrow-right-long"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <!--Analyst Testimonial Section-->
+      <section class="analyst-testimonial relative py-16 pb-20">
+        <img
+          src="./assets/images/analyst.jpg"
+          alt="banner-bg-image"
+          class="bg-image absolute top-0 left-0 w-full h-full object-scale-down"
+          style="object-position: 100% 50%"
+        />
+        <div class="overlay absolute top-0 left-0 w-full h-full"></div>
+        <div class="container flex flex-col">
+          <h4 class="text-4xl leading-10 mb-5">
+            Don’t just take our word for it. Take the analysts too
+          </h4>
+          <p class="font-light mb-10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </p>
+          <div class="w-4/5 flex space-x-3">
+            <img
+              src="./assets/images/quote.png"
+              alt="quote"
+              class="quote w-8 h-8 object-contain"
+            />
+            <div class="block w-full space-y-2">
+              <h5 class="text-lg">Dr. Kenn Walters</h5>
+              <p class="font-light">
+                Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut
+                labore
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--CTA Form-->
+      <section class="cta-form py-10">
+        <div class="container">
+          <div class="intro flex flex-col items-center">
+            <h2
+              class="capitalize text-center mb-5"
+              style="color: var(--primary-accent-color)"
+            >
+              talk to us now
+            </h2>
+            <h4
+              class="text-center font-normal w-full lg:w-3/5"
+              style="color: var(--foreground-color)"
+            >
+              We’d love to hear about your current business needs and where
+              you’re headed.
+            </h4>
+          </div>
+
+          <!--Form-->
+          <form class="flex flex-col mt-10">
+            <div class="grid lg:grid-cols-2 gap-5">
+              <div class="form-item flex flex-col">
+                <label>Full Name*</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="form-item flex flex-col">
+                <label>Phone*</label>
+                <input type="tel" name="phone" id="phone" />
+              </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-5 mt-6">
+              <div class="form-item flex flex-col">
+                <label>Business Email*</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="form-item flex flex-col">
+                <label>Company*</label>
+                <input type="text" name="company" id="company" />
+              </div>
+            </div>
+
+            <div class="form-item w-full mt-8">
+              <div class="custom-select">
+                <label for="industry-select">Select Industry</label>
+                <div class="select-box">
+                  <select id="industry-select">
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Private Equity">Private Equity</option>
+                    <option value="EdTech">EdTech</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="mt-16">
+              <p>Let's Talk</p>
+              <span><i class="fas fa-arrow-right-long"></i></span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-content relative w-full h-fit py-16">
+        <img
+          src="./assets/images/footer_vector.png"
+          alt="footer-vector"
+          class="absolute top-0 right-0 h-full w-auto z-0"
+        />
+        <div class="container">
+          <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">countries</h3>
+              <ul>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Private Equity</a></li>
+                <li><a href="#">EdTech</a></li>
+                <li><a href="#">KPOs</a></li>
+                <li><a href="#">Government Entities</a></li>
+                <li><a href="#">Banking and Financial BPO</a></li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Services</h3>
+              <ul>
+                <li><a href="#">Customer Experience</a></li>
+                <li><a href="#">Intelligent Back Office</a></li>
+                <li><a href="#">Platform, Automation & Analytics</a></li>
+                <li><a href="#">Insights, Design Experience</a></li>
+                <li><a href="#">Advisory</a></li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Location</h3>
+              <address>
+                4th Floor The Oval, Westlands, Nairobi Kenya<br />
+                P.O.BOX 69014, 00622 Nairobi
+              </address>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Contacts</h3>
+              <p>Phone & Mobile:</p>
+              <p>+254 727 485 151</p>
+              <p>+254 724 393 999</p>
+            </div>
+          </div>
+
+          <div class="w-full flex items-start justify-between">
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mt-6 mb-4">Email</h3>
+              <ul>
+                <li>support@atlascontactcentres.com</li>
+                <li>sales@atlascontactcentres.com</li>
+                <li>info@atlascontactcentres.com</li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mt-6 mb-4">Follow Us</h3>
+              <div class="social flex items-center space-x-2 mt-8">
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bar w-full h-fit py-6">
+        <div class="container flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="#">Privacy Policy</a>
+            <div
+              class="separator w-px h-6 mx-4"
+              style="background-color: #062a3c"
+            ></div>
+            <a href="#">Sitemap</a>
+          </div>
+
+          <p>©Atlas Contact Centres 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--JS-->
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/fancybox.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

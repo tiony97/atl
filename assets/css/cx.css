@@ -1,0 +1,13 @@
+/* CX SOLUTIONS STYLES */
+.cx-dual-col .image-wrapper .text-content {
+  width: 85%;
+  background: var(--background-color);
+  border: 1px solid #afe8fd;
+}
+.cx-dual-col .content-wrapper h4 {
+  color: var(--primary-accent-color);
+}
+.cx-dual-col .content-wrapper p {
+  color: #242626;
+  line-height: 30px;
+}/*# sourceMappingURL=cx.css.map */

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/fancybox.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Hidden Search Form -->
+    <div id="search-popup" style="display: none">
+      <form action="/search" method="GET">
+        <h2>Search</h2>
+        <input
+          type="text"
+          name="query"
+          placeholder="Enter search term..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!--Header-->
+    <header class="bg-white">
+      <div class="container h-full flex items-center justify-between">
+        <!--Logo-->
+        <img src="./assets/images/logo.jpg" alt="Logo" class="logo" />
+
+        <!--Navigation-->
+        <div class="w-fit h-full flex items-center">
+          <!--Menu Links-->
+          <div class="main-menu">
+            <ul class="menu-links relative flex items-center list-none">
+              <li class="menu-link active"><a href="#">Home</a></li>
+
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">About Us</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">countries</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+              <li class="menu-link menu-item-has-children">
+                <a href="javascript:void(0)">Services</a>
+                <ul class="sub-menu">
+                  <li class="menu-link"><a href="#">Careers</a></li>
+                  <li class="menu-link"><a href="#">Team</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-link"><a href="#">Why Atlas</a></li>
+            </ul>
+          </div>
+
+          <!--CTA Buttons-->
+          <button class="search mx-4" id="search-icon">
+            <img src="./assets/images/search-normal.png" alt="search" />
+          </button>
+
+          <a href="#" class="cta-btn flex items-center px-4 py-2">
+            <span class="mr-3"><i class="fas fa-phone"></i></span>
+            Book a Call
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--Page Content-->
+    <main>
+      <!--Careers Page Banner-->
+      <section class="common-banner relative">
+        <img
+          src="./assets/images/careers-bg-image.jpg"
+          alt="banner-bg-image"
+          class="bg-image absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div class="overlay absolute top-0 left-0 w-full h-full"></div>
+
+        <!--Banner Content-->
+        <div class="container banner-content relative flex flex-col">
+          <h1>Bring your big ideas and dreams</h1>
+          <p>Aspire. Achieve. Advance</p>
+
+          <a href="#" class="site-btn mt-5" style="width: fit-content">
+            <p>Search Jobs</p>
+            <span><i class="fas fa-arrow-right-long"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <!--Values Section-->
+      <section class="atlas-values relative">
+        <div class="container grid grid-cols-4">
+          <div class="value">
+            <div
+              class="seen flex flex-col justify-between px-6 py-6"
+              style="background-color: #a0ddf3"
+            >
+              <h4>Search for jobs & apply</h4>
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+              </p>
+            </div>
+            <div class="unseen px-6 pb-3" style="background-color: #a0ddf3">
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+                Our custom solutions across Banking and Financial Services,
+                Mortgage, Healthcare, Communications, Media and Technology, and
+                Diversified industries are designed to power growth.
+              </p>
+            </div>
+          </div>
+          <div class="value">
+            <div
+              class="seen flex flex-col justify-between px-6 py-6"
+              style="background-color: #afe8fd"
+            >
+              <h4>Learning and Development</h4>
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+              </p>
+            </div>
+            <div class="unseen px-6 pb-3" style="background-color: #afe8fd">
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+                Our custom solutions across Banking and Financial Services,
+                Mortgage, Healthcare, Communications, Media and Technology, and
+                Diversified industries are designed to power growth.
+              </p>
+            </div>
+          </div>
+          <div class="value">
+            <div
+              class="seen flex flex-col justify-between px-6 py-6"
+              style="background-color: #a0ddf3"
+            >
+              <h4>Life at Atlas</h4>
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+              </p>
+            </div>
+            <div class="unseen px-6 pb-3" style="background-color: #a0ddf3">
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+                Our custom solutions across Banking and Financial Services,
+                Mortgage, Healthcare, Communications, Media and Technology, and
+                Diversified industries are designed to power growth.
+              </p>
+            </div>
+          </div>
+          <div class="value">
+            <div
+              class="seen flex flex-col justify-between px-6 py-6"
+              style="background-color: #afe8fd"
+            >
+              <h4>Inclusion and Diversity</h4>
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+              </p>
+            </div>
+            <div class="unseen px-6 pb-3" style="background-color: #afe8fd">
+              <p>
+                Digital Now’ approach to create the greatest business impact.
+                Our custom solutions across Banking and Financial Services,
+                Mortgage, Healthcare, Communications, Media and Technology, and
+                Diversified industries are designed to power growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Two Column Family Section-->
+      <section class="family py-12">
+        <div class="container grid grid-cols-2 gap-16">
+          <div
+            class="content-wrapper w-full h-full flex flex-col justify-center space-y-5"
+          >
+            <p>
+              When done right, digitalization drives unparalleled agility,
+              scalability and productivity. We complement your human capital
+              with our ‘Digital First.
+            </p>
+            <p>
+              Digital Now’ approach to create the greatest business impact. Our
+              custom solutions across Banking and Financial Services, Mortgage,
+              Healthcare, Communications, Media and Technology, and Diversified
+              countries are designed to power growth.
+            </p>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable.
+            </p>
+          </div>
+          <div class="image-wrapper relative w-full h-[400px]">
+            <img
+              src="./assets/images/career-team.jpg"
+              alt="team-image"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="overlay absolute top-0 left-0 w-full h-full z-0"
+              style="
+                background: linear-gradient(
+                  276.89deg,
+                  #1396ba 1.57%,
+                  #1396ba 34.41%,
+                  #1396ba 53.4%,
+                  #015883 99.94%
+                );
+                opacity: 0.5;
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!--Career Form-->
+      <section class="career-form py-10">
+        <div class="container">
+          <div class="intro flex flex-col items-center">
+            <h2
+              class="capitalize text-center mb-5"
+              style="color: var(--primary-accent-color)"
+            >
+              Fill in the form to get in touch and apply
+            </h2>
+          </div>
+
+          <!--Form-->
+          <form class="flex flex-col mt-10">
+            <div class="grid lg:grid-cols-2 gap-5">
+              <div class="form-item flex flex-col">
+                <label>First Name*</label>
+                <input type="text" name="Fname" id="Fname" />
+              </div>
+              <div class="form-item flex flex-col">
+                <label>Last Name*</label>
+                <input type="text" name="Lname" id="Lname" />
+              </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-5 mt-6">
+              <div class="form-item flex flex-col">
+                <label>Email Address*</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="form-item flex flex-col">
+                <label>Phone*</label>
+                <input type="tel" name="phone" id="phone" />
+              </div>
+            </div>
+
+            <div class="form-item w-full mt-8">
+              <div class="custom-select">
+                <label for="role-select">Role interested in*</label>
+                <div class="select-box">
+                  <select id="role-select">
+                    <option value="Healthcare">Role 1</option>
+                    <option value="Private Equity">Role 2</option>
+                    <option value="EdTech">Role 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="form-item w-full flex items-center justify-between space-x-3 mt-6"
+            >
+              <label>Are you currently Employed?</label>
+              <div class="flex items-center space-x-3">
+                <div
+                  class="choice flex items-center justify-center space-x-1 px-10 py-1"
+                  style="border: 1px solid #242626"
+                >
+                  <input type="radio" name="ch-value" class="cursor-pointer" />
+                  <p>Yes</p>
+                </div>
+
+                <div
+                  class="choice flex items-center justify-center space-x-1 px-10 py-1"
+                  style="border: 1px solid #242626"
+                >
+                  <input type="radio" name="ch-value" class="cursor-pointer" />
+                  <p>No</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-item flex flex-col mt-8">
+              <label>Current Job*</label>
+              <input type="text" name="currentJob" id="currentJob" />
+            </div>
+
+            <div class="form-item w-full mt-8">
+              <div class="custom-select">
+                <label for="av-select">Select Availability</label>
+                <div class="select-box">
+                  <select id="av-select">
+                    <option value="Healthcare">Full time</option>
+                    <option value="Private Equity">Part Time</option>
+                    <option value="EdTech">Remote</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-item flex flex-col mt-8">
+              <label>Leave a message*</label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+
+            <button type="submit" class="mt-16">
+              <p>Let's Talk</p>
+              <span><i class="fas fa-arrow-right-long"></i></span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-content relative w-full h-fit py-16">
+        <img
+          src="./assets/images/footer_vector.png"
+          alt="footer-vector"
+          class="absolute top-0 right-0 h-full w-auto z-0"
+        />
+        <div class="container">
+          <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">countries</h3>
+              <ul>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Private Equity</a></li>
+                <li><a href="#">EdTech</a></li>
+                <li><a href="#">KPOs</a></li>
+                <li><a href="#">Government Entities</a></li>
+                <li><a href="#">Banking and Financial BPO</a></li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Services</h3>
+              <ul>
+                <li><a href="#">Customer Experience</a></li>
+                <li><a href="#">Intelligent Back Office</a></li>
+                <li><a href="#">Platform, Automation & Analytics</a></li>
+                <li><a href="#">Insights, Design Experience</a></li>
+                <li><a href="#">Advisory</a></li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Location</h3>
+              <address>
+                4th Floor The Oval, Westlands, Nairobi Kenya<br />
+                P.O.BOX 69014, 00622 Nairobi
+              </address>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mb-4">Contacts</h3>
+              <p>Phone & Mobile:</p>
+              <p>+254 727 485 151</p>
+              <p>+254 724 393 999</p>
+            </div>
+          </div>
+
+          <div class="w-full flex items-start justify-between">
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mt-6 mb-4">Email</h3>
+              <ul>
+                <li>support@atlascontactcentres.com</li>
+                <li>sales@atlascontactcentres.com</li>
+                <li>info@atlascontactcentres.com</li>
+              </ul>
+            </div>
+            <div class="item w-fit">
+              <h3 class="font-bold text-lg mt-6 mb-4">Follow Us</h3>
+              <div class="social flex items-center space-x-2 mt-8">
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="link flex items-center justify-center"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bar w-full h-fit py-6">
+        <div class="container flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="#">Privacy Policy</a>
+            <div
+              class="separator w-px h-6 mx-4"
+              style="background-color: #062a3c"
+            ></div>
+            <a href="#">Sitemap</a>
+          </div>
+
+          <p>©Atlas Contact Centres 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--JS-->
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/fancybox.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
