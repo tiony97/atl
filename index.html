@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body>
+  <body class="relative">
     <!-- Hidden Global Search Form -->
     <div id="search-popup" style="display: none">
       <form action="/search" method="GET">
@@ -27,6 +27,9 @@
         <button type="submit">Search</button>
       </form>
     </div>
+
+    <!--Body overlay for mobile menu-->
+    <div class="body-overlay absolute top-0 left-0 w-full h-full"></div>
 
     <!--Header-->
     <header class="bg-white">
@@ -67,8 +70,17 @@
             </ul>
           </div>
 
+          <!--Mobile Menu Toggler-->
+          <div class="menu-toggle">
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
           <!--CTA Buttons-->
-          <button class="search mx-4" id="search-icon">
+          <button class="search mx-2 lg:mx-4" id="search-icon">
             <img src="./assets/images/search-normal.png" alt="search" />
           </button>
 
@@ -80,15 +92,50 @@
       </div>
     </header>
 
+    <!--Mobile Menu-->
+    <div class="mobile-menu">
+      <div class="container">
+        <ul class="menu-links relative list-none">
+          <li class="menu-link"><a href="./services.html">Our Services</a></li>
+
+          <li class="menu-link menu-item-has-children">
+            <a href="javascript:void(0)">Our Locations</a>
+            <ul class="sub-menu">
+              <li class="menu-link">
+                <a href="./locations.html">Location 1</a>
+              </li>
+              <li class="menu-link">
+                <a href="./locations.html">Location 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-link"><a href="./about.html">About Us</a></li>
+
+          <li class="menu-link"><a href="./partners.html">Our Partners</a></li>
+
+          <li class="menu-link menu-item-has-children">
+            <a href="javascript:void(0)">Resources</a>
+            <ul class="sub-menu">
+              <li class="menu-link"><a href="./news.html">News & Media</a></li>
+              <li class="menu-link"><a href="./careers.html">Careers</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-link"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
     <!--Page Content-->
     <main>
       <!--Home page banner-->
       <section class="home-banner">
-        <div class="banner-swiper relative overflow-hidden relative">
+        <div class="banner-swiper relative overflow-hidden">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div
-                class="relative h-screen flex flex-col justify-center items-start text-white"
+                class="inner relative h-screen lg:h-screen md:h-screen flex flex-col justify-center items-start text-white"
                 style="
                   background: url(./assets/images/banner_image.jpg) center
                     no-repeat;
@@ -108,10 +155,10 @@
                   "
                 ></div>
                 <div class="container z-10">
-                  <h1 class="font-semibold w-2/5">
+                  <h1 class="font-semibold lg:w-2/5">
                     Connecting You to Excellence
                   </h1>
-                  <p class="text-lg font-normal leading-7 mt-4 w-2/5">
+                  <p class="text-lg font-normal leading-7 mt-4 lg:w-2/5">
                     Need support delivering seamless customer service with every
                     interaction?
                   </p>
@@ -124,7 +171,7 @@
             </div>
             <div class="swiper-slide">
               <div
-                class="relative h-screen flex flex-col justify-center items-start text-white"
+                class="inner relative h-screen lg:h-screen md:h-screen flex flex-col justify-center items-start text-white"
                 style="
                   background: url(./assets/images/banner_image.jpg) center
                     no-repeat;
@@ -144,10 +191,10 @@
                   "
                 ></div>
                 <div class="container z-10">
-                  <h1 class="font-semibold w-2/5">
+                  <h1 class="font-semibold lg:w-2/5">
                     Connecting You to Excellence
                   </h1>
-                  <p class="text-lg font-normal leading-7 mt-4 w-2/5">
+                  <p class="text-lg font-normal leading-7 mt-4 lg:w-2/5">
                     Need support delivering seamless customer service with every
                     interaction?
                   </p>
@@ -160,7 +207,7 @@
             </div>
             <div class="swiper-slide">
               <div
-                class="relative h-screen flex flex-col justify-center items-start text-white"
+                class="inner relative h-screen lg:h-screen md:h-screen flex flex-col justify-center items-start text-white"
                 style="
                   background: url(./assets/images/banner_image.jpg) center
                     no-repeat;
@@ -180,10 +227,10 @@
                   "
                 ></div>
                 <div class="container z-10">
-                  <h1 class="font-semibold w-2/5">
+                  <h1 class="font-semibold lg:w-2/5">
                     Connecting You to Excellence
                   </h1>
-                  <p class="text-lg font-normal leading-7 mt-4 w-2/5">
+                  <p class="text-lg font-normal leading-7 mt-4 lg:w-2/5">
                     Need support delivering seamless customer service with every
                     interaction?
                   </p>
@@ -196,7 +243,7 @@
             </div>
             <div class="swiper-slide">
               <div
-                class="relative h-screen flex flex-col justify-center items-start text-white"
+                class="inner relative h-screen lg:h-screen md:h-screen flex flex-col justify-center items-start text-white"
                 style="
                   background: url(./assets/images/banner_image.jpg) center
                     no-repeat;
@@ -216,10 +263,10 @@
                   "
                 ></div>
                 <div class="container z-10">
-                  <h1 class="font-semibold w-2/5">
+                  <h1 class="font-semibold lg:w-2/5">
                     Connecting You to Excellence
                   </h1>
-                  <p class="text-lg font-normal leading-7 mt-4 w-2/5">
+                  <p class="text-lg font-normal leading-7 mt-4 lg:w-2/5">
                     Need support delivering seamless customer service with every
                     interaction?
                   </p>
@@ -252,7 +299,9 @@
           </div>
 
           <!--Solutions Items grid-->
-          <div class="grid grid-cols-4 gap-5 mt-10">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 mt-10"
+          >
             <div class="solution">
               <div class="image-wrapper relative">
                 <img
@@ -436,7 +485,7 @@
       <!--Superpower Section-->
       <section class="superpower py-12">
         <div
-          class="container grid grid-cols-2 gap-10 justify-items-center place-items-center items-center"
+          class="container grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 justify-items-center place-items-center items-center"
         >
           <div class="content-wrapper">
             <div class="intro">
@@ -456,7 +505,9 @@
               Healthcare, Communications, Media and Technology, and Diversified
               industries are designed to power growth.
             </p>
-            <div class="flex items-center space-x-2 mt-10">
+            <div
+              class="flex flex-col lg:flex-row lg:items-center lg:space-x-2 space-y-2 lg:space-y-0 mt-10"
+            >
               <a href="#" class="site-btn-outline">
                 <p>Embrace Operational</p>
                 <span><i class="fas fa-arrow-right-long"></i></span>
@@ -889,7 +940,7 @@
 
     <!--Footer-->
     <footer>
-      <div class="footer-content relative w-full h-fit py-16">
+      <div class="footer-content relative w-full h-fit lg:py-16 py-12">
         <img
           src="./assets/images/footer_vector.png"
           alt="footer-vector"
@@ -933,7 +984,9 @@
             </div>
           </div>
 
-          <div class="w-full flex items-start justify-between">
+          <div
+            class="w-full flex flex-col lg:flex-row items-start justify-between"
+          >
             <div class="item w-fit">
               <h3 class="font-bold text-lg mt-6 mb-4">Email</h3>
               <ul>
@@ -964,7 +1017,9 @@
       </div>
 
       <div class="footer-bar w-full h-fit py-6">
-        <div class="container flex items-center justify-between">
+        <div
+          class="container flex flex-col lg:flex-row lg:items-center justify-between space-y-2 lg:space-y-0"
+        >
           <div class="flex items-center">
             <a href="#">Privacy Policy</a>
             <div

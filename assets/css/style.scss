@@ -216,11 +216,8 @@ header {
   max-width: 100vw;
   height: 80px;
   background: transparent;
-  z-index: 100 !important;
+  z-index: 90 !important;
   transition: all 0.3s ease;
-  * {
-    z-index: 99;
-  }
 
   &.fixed {
     position: fixed;
@@ -363,6 +360,69 @@ header {
       }
     }
 
+    //Mobile Menu Toggler
+    .menu-toggle {
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      margin-right: 0.5em;
+      z-index: 999 !important;
+      .menu-icon {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 15px;
+        transition: all 0.6s ease-in;
+
+        span {
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: var(--foreground-color-light);
+          transition: all 0.3s ease-in;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 7.5px;
+          }
+          &:nth-child(3) {
+            top: 15px;
+          }
+        }
+
+        &.open {
+          position: absolute;
+          top: 2em;
+          right: 1.5em;
+          span {
+            background-color: var(--primary-accent-color) !important;
+            &:nth-child(1) {
+              top: 10px;
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              top: 10px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        &:hover {
+          span {
+            background-color: var(--primary-accent-color) !important;
+            &:nth-of-type(2) {
+              width: 15%;
+            }
+          }
+        }
+      }
+    }
+
     .search {
       width: fit-content;
       height: fit-content;
@@ -401,6 +461,99 @@ header {
   }
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background: var(--primary-accent-color);
+  visibility: hidden;
+  pointer-events: none;
+  display: block;
+  flex-direction: column;
+  transition: all 0.6s ease-in-out;
+  z-index: 999;
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em 0;
+    padding-top: 4em;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    .menu-links {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+
+      .menu-link {
+        position: relative;
+        width: 100%;
+
+        a {
+          width: 100%;
+          display: block;
+          padding: 1em 1.5em;
+          color: var(--background-color);
+          text-decoration: none;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--secondary-accent-color);
+          }
+        }
+
+        &.menu-item-has-children {
+          > a::after {
+            content: "\25BC";
+            position: absolute;
+            right: 15px;
+            font-size: 12px;
+            transition: all 0.3s ease-in-out;
+          }
+
+          &.active > a::after {
+            content: "\25B2";
+          }
+
+          .sub-menu {
+            display: none;
+            list-style: none;
+            padding-left: 15px;
+            background-color: var(--secondary-accent-color);
+            .menu-link a {
+              padding-left: 30px;
+              &:hover {
+                color: var(--primary-accent-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Menu Icon Clicked
+  &.open {
+    width: 70%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    .container {
+      opacity: 1;
+    }
+  }
+}
+.body-overlay {
+  display: none;
+  background-color: #e8e8e8db;
+  z-index: 99;
+  transition: all 0.5s ease-in;
+  &.open {
+    display: block;
+  }
+}
 /* Footer */
 footer {
   .footer-content {
@@ -928,6 +1081,174 @@ footer {
             color: var(--background-color);
             border-color: var(--background-color);
           }
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+//Tablet
+@media (max-width: 1024px) {
+  header {
+    .logo {
+      height: 70px;
+      width: 200px !important;
+      object-fit: contain;
+    }
+    .main-menu {
+      display: none;
+    }
+    //Mobile Menu Toggler
+    .menu-toggle {
+      display: flex !important;
+    }
+    .cta-btn {
+      display: none;
+    }
+  }
+  .common-banner {
+    padding: 4em 0;
+    .banner-content {
+      h1 {
+        width: 100%;
+        margin-bottom: 0.2em;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .home-cta {
+    display: flex;
+    .content-wrapper {
+      height: 300px;
+      width: 100%;
+      .inner {
+        width: 70%;
+        .site-btn {
+          width: fit-content;
+        }
+      }
+    }
+    .image-wrapper {
+      height: 300px;
+      width: 100%;
+    }
+  }
+}
+
+//mobile
+@media (max-width: 768px) {
+  //Primary Title
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  //Secondary Title
+  h2 {
+    font-size: 28px;
+    line-height: 37px;
+  }
+
+  //Tertiary Title
+  h4 {
+    font-size: 20px;
+    line-height: 27.6px;
+  }
+
+  //Mini Title
+  h5 {
+    font-size: 12px;
+    line-height: 18.4px;
+  }
+
+  p,
+  a,
+  ul {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .site-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+  }
+  .site-btn-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* HOME PAGE STYLES */
+  .home-banner {
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .superpower {
+    padding-bottom: 0;
+    .container {
+      .content-wrapper {
+        p {
+          line-height: 24px;
+        }
+      }
+      .image-wrapper {
+        height: 250px;
+      }
+    }
+  }
+  .home-cta {
+    display: flex;
+    flex-direction: column;
+    .content-wrapper {
+      height: 250px;
+      width: 100%;
+      .inner {
+        width: 80%;
+      }
+    }
+    .image-wrapper {
+      height: 300px;
+      width: 100%;
+    }
+  }
+  .cta-form {
+    .container {
+      width: 80%;
+      form {
+        label {
+          font-size: 15px;
+        }
+        input {
+          height: 30px;
+        }
+        .custom-select {
+          label {
+            font-size: 15px;
+          }
+
+          .select-box {
+            select {
+              width: 100%;
+              padding: 8px 12px;
+              font-size: 15px;
+            }
+
+            select option {
+              padding: 8px;
+            }
+          }
+        }
+        button {
+          height: 50px;
         }
       }
     }

@@ -1,3 +1,42 @@
+/* Mobile Menu */
+$(document).ready(function () {
+  $(".menu-toggle").click(function () {
+    $(".menu-icon").toggleClass("open");
+    $(".mobile-menu").toggleClass("open");
+    $(".body-overlay").toggleClass("open");
+    $("body").toggleClass("no-scroll"); // Toggle body scroll
+  });
+
+  // Close menu when overlay is clicked
+  $(".body-overlay").click(function () {
+    $(".menu-icon").removeClass("open");
+    $(".mobile-menu").removeClass("open");
+    $(this).removeClass("open");
+    $("body").removeClass("no-scroll"); // Re-enable body scroll
+  });
+
+  //Mobile Menu Accordion
+  $(".mobile-menu .menu-link.menu-item-has-children > a").on(
+    "click",
+    function (e) {
+      e.preventDefault();
+      var $submenu = $(this).next(".sub-menu");
+
+      // Toggle the current submenu
+      $submenu.slideToggle();
+
+      // Close other open submenus
+      $(".menu-link.menu-item-has-children")
+        .not($(this).parent())
+        .find(".sub-menu")
+        .slideUp();
+
+      // Toggle active class for the current menu item
+      $(this).parent().toggleClass("active").siblings().removeClass("active");
+    }
+  );
+});
+
 /* Fix header to top */
 $(document).ready(function () {
   const header = $("header");
@@ -55,6 +94,9 @@ $(document).ready(function () {
       480: {
         slidesPerView: 1,
       },
+      320: {
+        slidesPerView: 1,
+      },
     },
   });
 });
@@ -73,6 +115,9 @@ $(document).ready(function () {
         slidesPerView: 5,
       },
       480: {
+        slidesPerView: 2,
+      },
+      320: {
         slidesPerView: 1,
       },
     },
@@ -90,9 +135,12 @@ $(document).ready(function () {
     spaceBetween: 20,
     breakpoints: {
       768: {
-        slidesPerView: 6,
+        slidesPerView: 4,
       },
       480: {
+        slidesPerView: 1,
+      },
+      320: {
         slidesPerView: 1,
       },
     },
