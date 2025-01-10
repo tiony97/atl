@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <!-- Hidden Search Form -->
+    <!-- Hidden Global Search Form -->
     <div id="search-popup" style="display: none">
       <form action="/search" method="GET">
         <h2>Search</h2>
@@ -27,6 +27,9 @@
         <button type="submit">Search</button>
       </form>
     </div>
+
+    <!--Body overlay for mobile menu-->
+    <div class="body-overlay absolute top-0 left-0 w-full h-full"></div>
 
     <!--Header-->
     <header class="bg-white">
@@ -49,7 +52,7 @@
                 </ul>
               </li>
               <li class="menu-link menu-item-has-children">
-                <a href="javascript:void(0)">countries</a>
+                <a href="javascript:void(0)">Industries</a>
                 <ul class="sub-menu">
                   <li class="menu-link"><a href="#">Careers</a></li>
                   <li class="menu-link"><a href="#">Team</a></li>
@@ -67,8 +70,17 @@
             </ul>
           </div>
 
+          <!--Mobile Menu Toggler-->
+          <div class="menu-toggle">
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
           <!--CTA Buttons-->
-          <button class="search mx-4" id="search-icon">
+          <button class="search mx-2 lg:mx-4" id="search-icon">
             <img src="./assets/images/search-normal.png" alt="search" />
           </button>
 
@@ -79,6 +91,41 @@
         </div>
       </div>
     </header>
+
+    <!--Mobile Menu-->
+    <div class="mobile-menu">
+      <div class="container">
+        <ul class="menu-links relative list-none">
+          <li class="menu-link"><a href="./services.html">Our Services</a></li>
+
+          <li class="menu-link menu-item-has-children">
+            <a href="javascript:void(0)">Our Locations</a>
+            <ul class="sub-menu">
+              <li class="menu-link">
+                <a href="./locations.html">Location 1</a>
+              </li>
+              <li class="menu-link">
+                <a href="./locations.html">Location 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-link"><a href="./about.html">About Us</a></li>
+
+          <li class="menu-link"><a href="./partners.html">Our Partners</a></li>
+
+          <li class="menu-link menu-item-has-children">
+            <a href="javascript:void(0)">Resources</a>
+            <ul class="sub-menu">
+              <li class="menu-link"><a href="./news.html">News & Media</a></li>
+              <li class="menu-link"><a href="./careers.html">Careers</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-link"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
 
     <!--Page Content-->
     <main>
@@ -96,10 +143,12 @@
         <div class="container banner-content relative flex flex-col">
           <h5 class="mb-1">PLATFORM, AUTOMATION & ANALYTICS</h5>
           <h1>Modernize process, unlock business insights</h1>
-          <p class="w-2/5">
+          <p class="lg:w-2/5">
             Elevate customer experience with our Digital solutions
           </p>
-          <div class="flex items-center space-x-3 mt-6">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center lg:space-x-3 space-y-3 lg:space-y-0 mt-6"
+          >
             <a href="#" class="site-btn" style="width: fit-content">
               <p>Watch Video</p>
               <span><i class="fas fa-arrow-right-long"></i></span>
@@ -115,7 +164,9 @@
       <!--Tabs-->
       <section class="intel-tabs">
         <div class="tab-nav">
-          <div class="container flex items-center justify-between">
+          <div
+            class="container py-5 lg:py-0 flex flex-col lg:flex-row lg:items-center justify-between"
+          >
             <p class="tab-bc">
               <span>Services / </span>Platform, Automation and Analytics
             </p>
@@ -142,7 +193,11 @@
               </button>
             </div>
 
-            <a href="#" class="site-btn" style="width: fit-content">
+            <a
+              href="#"
+              class="site-btn mt-4 lg:mt-0"
+              style="width: fit-content"
+            >
               <p>Connect with us</p>
               <span><i class="fas fa-arrow-right-long"></i></span>
             </a>
@@ -152,7 +207,7 @@
         <div class="tab-content py-10">
           <div
             id="overview"
-            class="content active container grid grid-cols-2 gap-10"
+            class="content active container grid grid-cols-1 lg:grid-cols-2 gap-10"
           >
             <div
               class="image-wrapper relative w-full flex items-end justify-center"
@@ -197,7 +252,7 @@
             <div
               class="content-wrapper w-full h-fit flex flex-col justify-start"
             >
-              <h4 class="text-3xl leading-9 mb-2">
+              <h4 class="text-2xl lg:text-3xl leading-8 lg:leading-9 mb-2">
                 Customer relationships today are defined by few fundamental
                 truths:
               </h4>
@@ -249,14 +304,20 @@
           class="vect absolute top-0 left-0 h-full object-cover object-left-top"
           style="width: 50%"
         />
-        <div class="container flex justify-between">
-          <div class="content w-2/5">
-            <h4 class="text-3xl leading-10 w-4/5">
+        <div
+          class="container flex flex-col lg:flex-row md:flex-row justify-between"
+        >
+          <div class="content w-full lg:w-2/5 mb-8 lg:mb-0 md:mb-0">
+            <h4
+              class="text-2xl lg:text-3xl leading-8 lg:leading-10 w-full lg:w-4/5"
+            >
               Unleash the power of digital: Explore our offerings
             </h4>
           </div>
 
-          <div class="w-3/5 grid grid-cols-2 gap-5">
+          <div
+            class="w-full lg:w-3/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5"
+          >
             <div class="offering">
               <div class="image-wrapper relative">
                 <img
@@ -346,7 +407,9 @@
       </section>
 
       <!--Intelligence Section-->
-      <section class="intelligence grid grid-cols-2">
+      <section
+        class="intelligence grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+      >
         <div
           class="main relative w-full h-full flex items-center justify-center"
         >
@@ -368,7 +431,7 @@
           </div>
         </div>
 
-        <div class="results py-10">
+        <div class="results py-5 lg:py-10">
           <div class="container">
             <h4 class="text-white mb-5">Results Delivered</h4>
             <div class="result w-full flex items-center justify-between">
@@ -472,7 +535,7 @@
 
     <!--Footer-->
     <footer>
-      <div class="footer-content relative w-full h-fit py-16">
+      <div class="footer-content relative w-full h-fit lg:py-16 py-12">
         <img
           src="./assets/images/footer_vector.png"
           alt="footer-vector"
@@ -481,7 +544,7 @@
         <div class="container">
           <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
             <div class="item w-fit">
-              <h3 class="font-bold text-lg mb-4">countries</h3>
+              <h3 class="font-bold text-lg mb-4">Industries</h3>
               <ul>
                 <li><a href="#">Healthcare</a></li>
                 <li><a href="#">Private Equity</a></li>
@@ -516,7 +579,9 @@
             </div>
           </div>
 
-          <div class="w-full flex items-start justify-between">
+          <div
+            class="w-full flex flex-col lg:flex-row items-start justify-between"
+          >
             <div class="item w-fit">
               <h3 class="font-bold text-lg mt-6 mb-4">Email</h3>
               <ul>
@@ -547,7 +612,9 @@
       </div>
 
       <div class="footer-bar w-full h-fit py-6">
-        <div class="container flex items-center justify-between">
+        <div
+          class="container flex flex-col lg:flex-row lg:items-center justify-between space-y-2 lg:space-y-0"
+        >
           <div class="flex items-center">
             <a href="#">Privacy Policy</a>
             <div

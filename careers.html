@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <!-- Hidden Search Form -->
+    <!-- Hidden Global Search Form -->
     <div id="search-popup" style="display: none">
       <form action="/search" method="GET">
         <h2>Search</h2>
@@ -27,6 +27,9 @@
         <button type="submit">Search</button>
       </form>
     </div>
+
+    <!--Body overlay for mobile menu-->
+    <div class="body-overlay absolute top-0 left-0 w-full h-full"></div>
 
     <!--Header-->
     <header class="bg-white">
@@ -49,7 +52,7 @@
                 </ul>
               </li>
               <li class="menu-link menu-item-has-children">
-                <a href="javascript:void(0)">countries</a>
+                <a href="javascript:void(0)">Industries</a>
                 <ul class="sub-menu">
                   <li class="menu-link"><a href="#">Careers</a></li>
                   <li class="menu-link"><a href="#">Team</a></li>
@@ -67,8 +70,17 @@
             </ul>
           </div>
 
+          <!--Mobile Menu Toggler-->
+          <div class="menu-toggle">
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
           <!--CTA Buttons-->
-          <button class="search mx-4" id="search-icon">
+          <button class="search mx-2 lg:mx-4" id="search-icon">
             <img src="./assets/images/search-normal.png" alt="search" />
           </button>
 
@@ -79,6 +91,41 @@
         </div>
       </div>
     </header>
+
+    <!--Mobile Menu-->
+    <div class="mobile-menu">
+      <div class="container">
+        <ul class="menu-links relative list-none">
+          <li class="menu-link"><a href="./services.html">Our Services</a></li>
+
+          <li class="menu-link menu-item-has-children">
+            <a href="javascript:void(0)">Our Locations</a>
+            <ul class="sub-menu">
+              <li class="menu-link">
+                <a href="./locations.html">Location 1</a>
+              </li>
+              <li class="menu-link">
+                <a href="./locations.html">Location 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-link"><a href="./about.html">About Us</a></li>
+
+          <li class="menu-link"><a href="./partners.html">Our Partners</a></li>
+
+          <li class="menu-link menu-item-has-children">
+            <a href="javascript:void(0)">Resources</a>
+            <ul class="sub-menu">
+              <li class="menu-link"><a href="./news.html">News & Media</a></li>
+              <li class="menu-link"><a href="./careers.html">Careers</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-link"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
 
     <!--Page Content-->
     <main>
@@ -105,7 +152,7 @@
 
       <!--Values Section-->
       <section class="atlas-values relative">
-        <div class="container grid grid-cols-4">
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           <div class="value">
             <div
               class="seen flex flex-col justify-between px-6 py-6"
@@ -187,7 +234,9 @@
 
       <!--Two Column Family Section-->
       <section class="family py-12">
-        <div class="container grid grid-cols-2 gap-16">
+        <div
+          class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-16 gap-8"
+        >
           <div
             class="content-wrapper w-full h-full flex flex-col justify-center space-y-5"
           >
@@ -209,7 +258,7 @@
               slightly believable.
             </p>
           </div>
-          <div class="image-wrapper relative w-full h-[400px]">
+          <div class="image-wrapper relative w-full h-[300px] lg:h-[400px]">
             <img
               src="./assets/images/career-team.jpg"
               alt="team-image"
@@ -282,10 +331,10 @@
             </div>
 
             <div
-              class="form-item w-full flex items-center justify-between space-x-3 mt-6"
+              class="form-item flex flex-col lg:flex-row md:flex-row w-full lg:items-center md:items-center justify-between lg:space-x-3 md:space-x-2 mt-6"
             >
               <label>Are you currently Employed?</label>
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3 ">
                 <div
                   class="choice flex items-center justify-center space-x-1 px-10 py-1"
                   style="border: 1px solid #242626"
@@ -338,7 +387,7 @@
 
     <!--Footer-->
     <footer>
-      <div class="footer-content relative w-full h-fit py-16">
+      <div class="footer-content relative w-full h-fit lg:py-16 py-12">
         <img
           src="./assets/images/footer_vector.png"
           alt="footer-vector"
@@ -347,7 +396,7 @@
         <div class="container">
           <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
             <div class="item w-fit">
-              <h3 class="font-bold text-lg mb-4">countries</h3>
+              <h3 class="font-bold text-lg mb-4">Industries</h3>
               <ul>
                 <li><a href="#">Healthcare</a></li>
                 <li><a href="#">Private Equity</a></li>
@@ -382,7 +431,9 @@
             </div>
           </div>
 
-          <div class="w-full flex items-start justify-between">
+          <div
+            class="w-full flex flex-col lg:flex-row items-start justify-between"
+          >
             <div class="item w-fit">
               <h3 class="font-bold text-lg mt-6 mb-4">Email</h3>
               <ul>
@@ -413,7 +464,9 @@
       </div>
 
       <div class="footer-bar w-full h-fit py-6">
-        <div class="container flex items-center justify-between">
+        <div
+          class="container flex flex-col lg:flex-row lg:items-center justify-between space-y-2 lg:space-y-0"
+        >
           <div class="flex items-center">
             <a href="#">Privacy Policy</a>
             <div

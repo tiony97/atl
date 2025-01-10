@@ -1416,6 +1416,28 @@ footer .footer-bar a:hover {
   border-color: var(--background-color);
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .career-form .container {
+    width: 80%;
+  }
+  .career-form .container form label {
+    font-size: 15px;
+  }
+  .career-form .container form .custom-select label {
+    font-size: 15px;
+  }
+  .career-form .container form .custom-select .select-box select {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+  .career-form .container form .custom-select .select-box select option {
+    padding: 8px;
+  }
+  .career-form .container form button {
+    height: 50px;
+  }
+}
 /* CONTACT PAGE STYLES */
 .contact-form .container {
   width: 50%;
@@ -1509,6 +1531,32 @@ footer .footer-bar a:hover {
   border-color: var(--background-color);
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .contact-form .container {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form .container {
+    width: 80%;
+  }
+  .contact-form .container form label {
+    font-size: 15px;
+  }
+  .contact-form .container form .custom-select {
+    width: 100%;
+  }
+  .contact-form .container form .custom-select label {
+    font-size: 15px;
+  }
+  .contact-form .container form .custom-select .select-box select {
+    font-size: 15px;
+  }
+  .contact-form .container form button {
+    height: 50px;
+  }
+}
 /* CASE STUDY STYLES */
 .cs-tabs .tab-nav {
   height: auto;
@@ -1640,6 +1688,7 @@ footer .footer-bar a:hover {
   color: var(--foreground-color);
 }
 
+/* MEDIA QUERIES */
 /* CX SOLUTIONS STYLES */
 .cx-dual-col .image-wrapper {
   height: 450px;
@@ -1813,6 +1862,51 @@ footer .footer-bar a:hover {
   width: 40%;
 }
 
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .design-experience .container .tab-section {
+    /*Tabs*/
+  }
+  .design-experience .container .tab-section .image-wrapper {
+    width: 100%;
+    height: 240px;
+  }
+  .design-experience .container .tab-section .tab-container {
+    width: 100%;
+  }
+  .design-experience .container .tab-section .tab-container .tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .design-experience .container .tab-section .tab-container .tabs .tab {
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .design-experience .container .tab-section .tab-container .tab-content {
+    padding: 20px 0;
+  }
+  .value-delivery .tab-container {
+    width: 100%;
+  }
+  .value-delivery .tab-container .tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .value-delivery .tab-container .tabs .tab {
+    padding: 10px 0;
+  }
+  .value-delivery .tab-container .tab-content {
+    padding: 20px 0;
+  }
+  .analyst-testimonial .container h4 {
+    width: 100%;
+  }
+  .analyst-testimonial .container p {
+    width: 100%;
+  }
+}
 /* INSG STYLES */
 .card-section {
   background-color: rgba(1, 88, 131, 0.0588235294);
@@ -1846,6 +1940,7 @@ footer .footer-bar a:hover {
   color: #242626;
 }
 
+/* MEDIA QUERIES */
 /* BACK O STYLES */
 .back-tabs .tab-nav {
   height: auto;
@@ -2098,4 +2193,14 @@ footer .footer-bar a:hover {
 }
 .unleash .container .offering .content-wrapper a:hover img {
   scale: 0.8;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .unleash .container .offering .image-wrapper {
+    height: 150px;
+  }
+  .unleash .container .offering .content-wrapper {
+    min-height: 150px;
+  }
 }/*# sourceMappingURL=style.css.map */

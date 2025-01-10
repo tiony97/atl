@@ -104,3 +104,43 @@
     }
   }
 }
+
+/* MEDIA QUERIES */
+//Tablet
+@media (max-width: 1024px) {
+  .contact-form {
+    .container {
+      width: 80%;
+    }
+  }
+}
+
+//mobile
+@media (max-width: 768px) {
+  .contact-form {
+    .container {
+      width: 80%;
+      form {
+        label {
+          font-size: 15px;
+        }
+
+        .custom-select {
+          width: 100%;
+          label {
+            font-size: 15px;
+          }
+
+          .select-box {
+            select {
+              font-size: 15px;
+            }
+          }
+        }
+        button {
+          height: 50px;
+        }
+      }
+    }
+  }
+}

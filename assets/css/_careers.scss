@@ -104,3 +104,41 @@
     }
   }
 }
+
+/* MEDIA QUERIES */
+//Tablet
+@media (max-width: 1024px) {
+  .career-form {
+    .container {
+      width: 80%;
+      form {
+        label {
+          font-size: 15px;
+        }
+        .custom-select {
+          label {
+            font-size: 15px;
+          }
+
+          .select-box {
+            select {
+              padding: 8px 12px;
+              font-size: 15px;
+            }
+
+            select option {
+              padding: 8px;
+            }
+          }
+        }
+        button {
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+//mobile
+@media (max-width: 768px) {
+}

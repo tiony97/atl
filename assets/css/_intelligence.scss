@@ -132,3 +132,24 @@
     }
   }
 }
+
+/* MEDIA QUERIES */
+//Tablet
+@media (max-width: 1024px) {
+}
+
+//Mobile
+@media (max-width: 768px) {
+  .unleash {
+    .container {
+      .offering {
+        .image-wrapper {
+          height: 150px;
+        }
+        .content-wrapper {
+          min-height: 150px;
+        }
+      }
+    }
+  }
+}
